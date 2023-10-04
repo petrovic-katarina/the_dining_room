@@ -1,5 +1,18 @@
-<br>
-<h4><a href="">{{restaurant.name}}</a></h4>
-<p>{{restaurant.description}}</p>
-<p>Rating: {{restaurant.rating}}</p>
-<p>Price: {{restaurant.price}}</p>
+<h3><a href="">{{ restaurant.name }}</a></h3>
+<p>{{ restaurant.description }}</p>
+<p>
+  Rating:
+  <app-rating
+    [grade]="restaurant.rating"
+    iconFull="star-full.png"
+    iconEmpty="star-empty.png"
+  ></app-rating>
+</p>
+<p>
+  Price:
+  <app-rating
+    [grade]="restaurant.price"
+    iconFull="coin-full.png"
+    iconEmpty="coin-empty.png"
+  ></app-rating>
+</p>

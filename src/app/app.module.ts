@@ -11,6 +11,9 @@ import { RestaurantsComponent } from './restaurants/restaurants.component';
 import { HttpClientModule } from '@angular/common/http';
 import { RestaurantItemComponent } from './restaurants/restaurant-item/restaurant-item.component';
 import { RestaurantDetailComponent } from './restaurants/restaurant-detail/restaurant-detail.component';
+import { PaginationComponent } from './restaurants/pagination/pagination.component';
+import { ReactiveFormsModule } from '@angular/forms';
+import { RatingComponent } from './restaurants/restaurant-item/rating/rating.component';
 
 
 @NgModule({
@@ -21,13 +24,16 @@ import { RestaurantDetailComponent } from './restaurants/restaurant-detail/resta
     SideBarComponent,
     RestaurantsComponent,
     RestaurantItemComponent,
-    RestaurantDetailComponent
+    RestaurantDetailComponent,
+    PaginationComponent,
+    RatingComponent
   ],
   imports: [
     BrowserModule,
     AppRoutingModule,
     NgbModule,
-    HttpClientModule
+    HttpClientModule,
+    ReactiveFormsModule
   ],
   providers: [],
   bootstrap: [AppComponent]

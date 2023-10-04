@@ -7,4 +7,11 @@ import { Component } from '@angular/core';
 })
 export class SideBarComponent {
 
+  cuisines = ['All', 'German', 'Chinese', 'American', 'Indian', 'Pizza', 'Vegetarian']
+
+  constructor() { }
+
+  ngOnInit(): void {
+  }
+
 }

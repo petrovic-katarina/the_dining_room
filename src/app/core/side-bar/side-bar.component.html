@@ -1,7 +1,17 @@
-<h4>The Dining Room</h4>
-<a href="" [routerLink]="['/home']">Home</a>
-<hr>
-<a href="" [routerLink]="['/restaurants']">Restaurants</a>
-<hr>
-<a href="" [routerLink]="['/about']">About</a>
-<hr>
+<h3 class="ml-5">The Dining Room</h3>
+<ul class="nav flex-column">
+  <li class="nav-item">
+    <a class="nav-link" [routerLink]="['/home']">Home</a>
+  </li>
+  <hr>
+  <li class="nav-item">
+    <a class="nav-link" [routerLink]="['/restaurants']" >Restaurants</a><hr>
+    <div *ngFor="let cuisine of cuisines">
+      <a href="" class="nav-link" [routerLink]="['/restaurants', cuisine.toLowerCase()]" >{{cuisine}}</a>
+    </div>
+  </li>
+  <hr>
+  <li class="nav-item">
+    <a class="nav-link" [routerLink]="['/about']">About</a><br>
+  </li>
+</ul>

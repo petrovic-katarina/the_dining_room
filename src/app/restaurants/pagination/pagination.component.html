@@ -1,0 +1,16 @@
+<button type="button" class="btn btn-light" 
+[disabled]="page<=1"
+(click)="onFirstPage()">&laquo;</button>
+<button type="button" class="btn btn-light" 
+(click)="onChange(page - 1)"
+[disabled]="page<=1">&lt;</button>
+
+<button class="btn btn-light active">{{page}}</button>
+
+<button type="button" class="btn btn-light" 
+(click)="onChange(page + 1)"
+[disabled]="page*pageSize>=collectionSize">&gt;</button>
+<button type="button" class="btn btn-light"
+[disabled]="page*pageSize>=collectionSize"
+(click)="onLastPage()">&raquo;</button>
+
