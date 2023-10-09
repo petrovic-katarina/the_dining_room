@@ -1,3 +1,5 @@
+import { Days } from "./days.model";
+
 export class Restaurant {
   name: string;
   cuisine: string;
@@ -6,6 +8,7 @@ export class Restaurant {
   location: string;
   price: number;
   rating: number;
+  days: Days;
 
   constructor(obj?: any) {
     this.name = obj && obj.name || '';
@@ -15,6 +18,7 @@ export class Restaurant {
     this.location = obj && obj.location || '';
     this.price = obj && obj.price || 0;
     this.rating = obj && obj.rating || 0;
+    this.days = obj && new Days(obj.days) || new Days();
   }
 
 

@@ -1,5 +1,7 @@
 import { Component, Input } from '@angular/core';
+import { NgbModal } from '@ng-bootstrap/ng-bootstrap';
 import { Restaurant } from 'src/app/model/restaurant.model';
+import { MenuComponent } from '../menu/menu.component';
 
 @Component({
   selector: 'app-restaurant-item',
@@ -9,5 +11,13 @@ import { Restaurant } from 'src/app/model/restaurant.model';
 export class RestaurantItemComponent {
 
   @Input() restaurant: Restaurant = new Restaurant();
+
+  constructor(private modalService: NgbModal) { }
+
+  openMenu() {
+    let modalRef = this.modalService.open(MenuComponent);
+    modalRef.componentInstance.restaurant = this.restaurant;
+  }
+
 
 }

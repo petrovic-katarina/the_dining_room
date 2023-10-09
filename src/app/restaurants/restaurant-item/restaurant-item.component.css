@@ -1,4 +1,6 @@
-a {
+.headline {
+  cursor: pointer;
+  color: rgb(0, 98, 255);
   text-decoration: none;
 }
 
